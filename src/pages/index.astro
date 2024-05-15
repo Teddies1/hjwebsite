@@ -6,6 +6,10 @@ import Card from '../components/Card.astro';
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Hon Joo's webpage</span></h1>
+        <p class="introduction">
+            Hello! I am currently an incoming 4th year computer science student at Nanyang Technological University (NTU). 
+			I am based in Singapore where there is only one season and lots of humidity.
+        </p>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="./about"
@@ -15,17 +19,7 @@ import Card from '../components/Card.astro';
 			<Card
 				href="./blog"
 				title="Blog"
-				body="This blog contains reviews of modules I took in NTU CS"
-			/>
-			<Card
-				href="./modules"
-				title="Modules"
-				body="Check out the list of modules I took!"
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				body="This blog contains reviews of modules I took in NTU CS."
 			/>
 		</ul>
 	</main>
