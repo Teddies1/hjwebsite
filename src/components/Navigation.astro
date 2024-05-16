@@ -1,0 +1,25 @@
+---
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+---
+<ul role="list" class="link-card-grid">
+    <Card
+        href="./about"
+        title="About Me"
+        body="Learn more about me!"
+    />
+    <Card
+        href="./blog"
+        title="Blog"
+        body="This blog contains reviews of modules I took in NTU CS."
+    />
+</ul>
+
+<style>
+    .link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

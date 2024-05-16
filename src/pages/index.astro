@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro';
 const pageTitle = "Hon Joo's Website";
 
 const dict = {
@@ -13,22 +14,11 @@ const dict = {
 <Layout title={pageTitle}>
 	<main>
 		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
+		<Navigation></Navigation>
         <p class="introduction">
             Hello! I am {dict.name}, an incoming 4th year {dict.occupation} at Nanyang Technological University (NTU). 
 			I am based in {dict.country} where there is only one season and lots of humidity.
         </p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="./about"
-				title="About Me"
-				body="Learn more about me!"
-			/>
-			<Card
-				href="./blog"
-				title="Blog"
-				body="This blog contains reviews of modules I took in NTU CS."
-			/>
-		</ul>
 	</main>
 </Layout>
 
