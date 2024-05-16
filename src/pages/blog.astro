@@ -6,7 +6,12 @@ import Card from '../components/Card.astro';
 <Layout title="About Me">
 	<main>
 		<a class="button" href="/" role="button">Back</a>
-		<h1>Test</h1>
+		<h1>Directory</h1>
+		<ul>
+			<li><a href="/posts/post-1/">Post 1</a></li>
+			<li><a href="/posts/post-2/">Post 2</a></li>
+			<li><a href="/posts/post-3/">Post 3</a></li>
+		</ul>
 	</main>
 </Layout>
 
@@ -66,5 +71,12 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	a {
+		text-decoration: none;
+		
+	}
+	li {
+		color: white;
 	}
 </style>
