@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
+import NavigationSingle from '../components/NavigationSingle.astro';
 const pageTitle = "About Me";
 
 const aboutMe = {
@@ -16,7 +17,7 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
 
 <Layout title={pageTitle}>
 	<main>
-        <a class="button" href="/" role="button">Back</a>
+        <NavigationSingle></NavigationSingle>
 		<h1>
             {pageTitle}
         </h1>
@@ -91,7 +92,7 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
 		padding: 0;
 	}
 	.country{
-		color: rgb(var(--accent-light));
+		color: rgb(var(--accent-dark));
     	font-weight: bold;
 	}
 </style>
