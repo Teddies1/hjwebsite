@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 const pageTitle = "Hon Joo's Website";
 
 const dict = {
@@ -15,7 +15,7 @@ const dict = {
 <Layout title={pageTitle}>
 	<main>
 		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
-		<Navigation></Navigation>
+		<Header></Header>
         <p class="introduction">
             Hello! I am {dict.name}, an incoming 4th year {dict.occupation} at Nanyang Technological University (NTU). 
 			I am based in {dict.country} where there is only one season and lots of humidity.
