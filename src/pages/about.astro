@@ -1,23 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "About Me";
+
+const aboutMe = {
+	name: "Hon Joo",
+	country: "Singapore",
+	occupation: "student",
+	hobbies: ["swimming", "gaming"],
+}
+
+const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"];
 ---
 
-<Layout title="About Me">
+<Layout title={pageTitle}>
 	<main>
         <a class="button" href="/" role="button">Back</a>
 		<h1>
-            About Me
+            {pageTitle}
         </h1>
         <p class="introduction">
-            Welcome! This is my homepage, where I post things about my university life, modules, etc.
+            I previously worked at HP Inc. as a Data Science Intern. I have working experience in Python, data science libraries and FastAPI. 
         </p>
+		<p>
+			My hobbies are {aboutMe.hobbies[0]} and {aboutMe.hobbies[1]}. The countries I wish to visit are: {countries.map((country) => <li>{country}</li>)}
+		</p>
         <p>
-            I am currently an incoming Year 4 student at Nanyang Technological University. I am currently studying computer science.
-        </p>
-        <p>
-            This page contains the list of modules I've taken and plan to take. It also contains reviews for some of the modules.
-            I have also added my LinkedIn and Github profile links.
+            This website contains a blog of the modules I've taken in school.
+            I have also added my LinkedIn and Github profile links. Let's connect!
         </p>
 	</main>
 </Layout>
