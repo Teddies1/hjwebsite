@@ -23,7 +23,7 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
             I previously worked at HP Inc. as a Data Science Intern. I have working experience in Python, data science libraries and FastAPI. 
         </p>
 		<p>
-			My hobbies are {aboutMe.hobbies[0]} and {aboutMe.hobbies[1]}. The countries I wish to visit are: {countries.map((country) => <li>{country}</li>)}
+			My hobbies are {aboutMe.hobbies[0]} and {aboutMe.hobbies[1]}. The countries I wish to visit are: {countries.map((country) => <li class="country">{country}</li>)}
 		</p>
         <p>
             This website contains a blog of the modules I've taken in school.
@@ -88,5 +88,9 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.country{
+		color: rgb(var(--accent-light));
+    	font-weight: bold;
 	}
 </style>
