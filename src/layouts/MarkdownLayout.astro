@@ -1,0 +1,10 @@
+---
+const { frontmatter } = Astro.props;
+---
+<p>Written by: {frontmatter.author}</p>
+<h1>{frontmatter.title}</h1>
+<p>{frontmatter.date}</p>
+<ul>{frontmatter.tags.map((tag) => <li class="country">{tag}</li>)}</ul>
+
+
+<slot />
