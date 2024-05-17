@@ -1,10 +1,22 @@
 ---
 const { frontmatter } = Astro.props;
+import Layout from "./Layout.astro";
 ---
-<p>Written by: {frontmatter.author}</p>
-<h1>{frontmatter.title}</h1>
-<p>{frontmatter.date}</p>
-<ul>{frontmatter.tags.map((tag) => <li class="country">{tag}</li>)}</ul>
+<Layout title={frontmatter.title}>
+    <p>Written by: {frontmatter.author}</p>
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.date}</p>
+    <ul>{frontmatter.tags.map((tag) => <li class="country">{tag}</li>)}</ul>
 
+    <slot />
+</Layout>
 
-<slot />
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        color: white;
+    }
+</style>
