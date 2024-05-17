@@ -25,12 +25,19 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
             I previously worked at HP Inc. as a Data Science Intern. I have working experience in Python, data science libraries and FastAPI. 
         </p>
 		<p>
-			My hobbies are {aboutMe.hobbies[0]} and {aboutMe.hobbies[1]}. The countries I wish to visit are: {countries.map((country) => <li class="country">{country}</li>)}
+			My hobbies are {aboutMe.hobbies[0]} and {aboutMe.hobbies[1]}. 
+			The countries I wish to visit are: 
+			<ul>
+				{countries.map((country) => <li class="country">{country}</li>)}
+			</ul>
 		</p>
         <p>
             This website contains a blog of the modules I've taken in school.
             I have also added my LinkedIn and Github profile links. Let's connect!
         </p>
+		<p>
+			Travel log:
+		</p>
 	</main>
 </Layout>
 
@@ -94,5 +101,8 @@ const countries = ["Korea, Switzerland, Japan, Spain, Germany, London, Belgium"]
 	.country{
 		color: rgb(var(--accent-dark));
     	font-weight: bold;
+	}
+	ul {
+		list-style-type: none;
 	}
 </style>
