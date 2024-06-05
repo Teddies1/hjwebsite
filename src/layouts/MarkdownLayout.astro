@@ -4,10 +4,14 @@ import Layout from "./Layout.astro";
 ---
 <Layout title={frontmatter.title}>
     <p>Written by: {frontmatter.author}</p>
-    <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.date}</p>
-    <ul>{frontmatter.tags.map((tag) => <li class="country">{tag}</li>)}</ul>
+    <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>{frontmatter.description}</p>
 
+    <div class="tags">
+        {frontmatter.tags.map((tag) => (
+          <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
     <slot />
 </Layout>
 
@@ -18,5 +22,24 @@ import Layout from "./Layout.astro";
         justify-content: center;
         align-items: start;
         color: white;
+    }
+    
+    a {
+        color: #00539F;
+        text-decoration: none;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        margin: 0.25em;
+        border: dotted 1px #a1a1a1;
+        border-radius: .5em;
+        padding: .5em 1em;
+        font-size: 1.15em;
+        background-color: #F8FCFD;
     }
 </style>
