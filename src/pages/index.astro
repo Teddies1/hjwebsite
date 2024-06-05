@@ -3,21 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-const pageTitle = "Hon Joo's Website";
+import Greeting from '../components/Greeting';
 
+const pageTitle = "Hon Joo's Website";
 const dict = {
 	name: "Hon Joo",
 	country: "Singapore",
 	occupation: "computer science student",
 }
+const greetings = ["Hej", "Hallo", "Hola", "Habari"]
 ---
 
 <Layout title={pageTitle}>
 	<main>
-		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
 		<Header></Header>
+		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
+		<Greeting client:load messages={greetings} />		
         <p class="introduction">
-            Hello! I am {dict.name}, an incoming 4th year {dict.occupation} at Nanyang Technological University (NTU). 
+             I am {dict.name}, an incoming 4th year {dict.occupation} at Nanyang Technological University (NTU). 
 			I am based in {dict.country} where there is only one season and lots of humidity.
         </p>
 		<Footer></Footer>
