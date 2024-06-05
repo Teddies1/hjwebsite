@@ -1,12 +1,9 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
-title: 'Module Review: '
-date: '2022-07-01'
-description: 'This is the first post of my new Astro blog.'
-author: 'Hon Joo'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
+title: Module Review
+pubDate: 2022-07-01
+author: Hon Joo
+description: "This is the first post of my new Astro blog."
 tags: ["astro", "blogging", "learning in public"]
 ---
 
